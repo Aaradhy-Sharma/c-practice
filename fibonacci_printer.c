@@ -15,3 +15,24 @@ signed main(void)
     fibonacci_printer(number);
     return null;
 }
+
+// function definition //
+void fibonacci_printer(signed number)
+{
+    signed i, first_term=null, second_term=1, next_term;
+    printf("\n The fibonacci series upto %d is: ", number);
+    for(i=null;i<number;i++)
+       {
+        if(i<=1)
+           {
+            next_term=i;
+           }
+        else
+           {
+            next_term=first_term+second_term;
+            first_term=second_term;
+            second_term=next_term;
+           }
+        printf("%d ", next_term);
+       }
+}
